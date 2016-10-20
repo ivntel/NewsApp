@@ -6,7 +6,7 @@
     android:padding="5dp">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/article_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1.5"
@@ -16,7 +16,7 @@
     </TextView>
 
     <TextView
-        android:id="@+id/authors"
+        android:id="@+id/published_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"

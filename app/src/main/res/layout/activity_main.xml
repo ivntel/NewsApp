@@ -66,7 +66,7 @@
         android:layout_alignParentRight="true"
         android:textSize="18sp"/>
     <ListView
-        android:id="@+id/books_list"
+        android:id="@+id/articles_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/titles_row" />
