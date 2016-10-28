@@ -17,13 +17,13 @@ import static android.content.ContentValues.TAG;
  */
 public class Articles {
     private String mWebTitle;
-    private String mPublicationDate;
+    private String mSectionName;
     private String mWebUrl;
 
     public Articles(JSONObject newsObject) {
         try {
             this.mWebTitle = newsObject.getString("webTitle");
-            this.mPublicationDate = newsObject.getString("webPublicationDate");
+            this.mSectionName = newsObject.getString("sectionName");
             this.mWebUrl = newsObject.getString("webUrl");
         } catch (JSONException e) {
             Log.e(TAG, "Error creating a News object from JSONObject", e);
@@ -31,7 +31,7 @@ public class Articles {
     }
 
     public String getWebTitle() { return mWebTitle; }
-    public String getPublicationDate() { return mPublicationDate; }
+    public String getSectionName() { return mSectionName; }
     public String getWebUrl() { return mWebUrl; }
 
     public static List<Articles> getNewsListFromJson(JSONArray jsonNewsObjects) {

@@ -25,7 +25,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Enter Search Text"
+            android:hint="Enter Search Word"
             android:imeOptions="actionSend"
             android:singleLine="true"/>
 
@@ -55,15 +55,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/divider"
         android:visibility="gone"
+        android:text="Title"
         android:textSize="18sp"/>
     <TextView
-        android:id="@+id/authors_row"
+        android:id="@+id/sections_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/divider"
         android:visibility="gone"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:text="Section"
         android:textSize="18sp"/>
     <ListView
         android:id="@+id/articles_list"

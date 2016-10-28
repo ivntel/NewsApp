@@ -20,7 +20,7 @@ public class ArticlesAdapter extends ArrayAdapter<Articles> {
 
     private static class ViewHolder {
         TextView title;
-        TextView publishedDate;
+        TextView sectionName;
     }
 
     public ArticlesAdapter(Context context, List<Articles> articleList) {
@@ -34,13 +34,13 @@ public class ArticlesAdapter extends ArrayAdapter<Articles> {
 
         ViewHolder viewHolder;
 
-        if( convertView == null) {
+        if (convertView == null) {
             viewHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.listview_layout, parent, false);
 
             viewHolder.title = (TextView) convertView.findViewById(R.id.article_title);
-            viewHolder.publishedDate = (TextView) convertView.findViewById(R.id.published_date);
+            viewHolder.sectionName = (TextView) convertView.findViewById(R.id.section_name);
 
             convertView.setTag(viewHolder);
         } else {
@@ -48,7 +48,7 @@ public class ArticlesAdapter extends ArrayAdapter<Articles> {
         }
 
         viewHolder.title.setText(news.getWebTitle());
-        viewHolder.publishedDate.setText(news.getPublicationDate());
+        viewHolder.sectionName.setText(news.getSectionName());
 
         return convertView;
     }

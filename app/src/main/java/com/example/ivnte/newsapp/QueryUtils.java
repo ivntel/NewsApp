@@ -31,9 +31,9 @@ public final class QueryUtils {
         try {
             JSONObject newsJson = new JSONObject(makeHttpRequest(createUrl(url)));
             newsList = Articles.getNewsListFromJson(newsJson.getJSONObject("response").getJSONArray("results"));
-        }catch (JSONException e) {
+        } catch (JSONException e) {
             Log.e(TAG, "Error creating JSON Object from HTTPRequest String", e);
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
             Log.e(TAG, "Error fetching news data", e);
         }
@@ -46,14 +46,14 @@ public final class QueryUtils {
         HttpURLConnection urlConnection = null;
         InputStream inputStream = null;
 
-        try{
+        try {
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
             urlConnection.setReadTimeout(10000);
             urlConnection.setConnectTimeout(15000);
             urlConnection.connect();
 
-            if(urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+            if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             }
@@ -79,11 +79,11 @@ public final class QueryUtils {
 
     private static String readFromStream(InputStream inputStream) throws IOException {
         StringBuilder output = new StringBuilder();
-        if(inputStream != null) {
+        if (inputStream != null) {
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
             BufferedReader reader = new BufferedReader(inputStreamReader);
             String line = reader.readLine();
-            while(line != null) {
+            while (line != null) {
                 output.append(line);
                 line = reader.readLine();
             }

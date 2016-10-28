@@ -17,13 +17,13 @@ public class ArticlesLoader extends AsyncTaskLoader<List<Articles>> {
 
     public ArticlesLoader(Context context, String url) {
         super(context);
-        Log.i(TAG, "NewsLoader: "+ url);
+        Log.i(TAG, "ArticlesLoader: " + url);
         mUrl = url;
     }
 
     @Override
     public List<Articles> loadInBackground() {
-        if(mUrl == null) return null;
+        if (mUrl == null) return null;
 
         List<Articles> articleList = QueryUtils.fetchNewsData(mUrl);
         return articleList;

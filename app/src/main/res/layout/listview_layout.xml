@@ -12,16 +12,15 @@
         android:layout_weight="1.5"
         android:gravity="center"
         android:textSize="16sp"
-        android:textStyle="bold">
-    </TextView>
+        android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/published_date"
+        android:id="@+id/section_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
         android:textSize="16sp"
-        android:textStyle="italic"/>
+        android:textStyle="italic" />
 
 </LinearLayout>
